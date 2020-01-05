@@ -25,8 +25,8 @@ jobs:
     - run: npm run build        
     # 发布到 GitHub Pages    
     - name: Deploy      
-      uses: peaceiris/actions-master@v2      
+      uses: peaceiris/actions-gh-pages@v2      
       env:        
-        PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}        
-        PUBLISH_BRANCH: master       
+        PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKENS }}        
+        PUBLISH_BRANCH: gh-pages       
         PUBLISH_DIR: ./public
